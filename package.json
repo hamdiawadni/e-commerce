@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@payloadcms/bundler-webpack": "^1.0.0",
-    "@payloadcms/db-mongodb": "^1.0.0",
+    "@payloadcms/db-mongodb": "^1.0.3",
     "@payloadcms/plugin-cloud": "^3.0.0",
     "@payloadcms/plugin-nested-docs": "^1.0.8",
     "@payloadcms/plugin-redirects": "^1.0.0",
@@ -46,7 +46,8 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "7.45.4",
     "react-router-dom": "5.3.4",
-    "stripe": "^10.2.0"
+    "stripe": "^10.2.0",
+    "webpack-sources": "^3.2.3"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.1.6",

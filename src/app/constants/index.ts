@@ -1,4 +1,5 @@
 export const inclusions = [
+
   {
     title: 'Free Shipping',
     description: 'Free shipping for order above $150',
@@ -45,3 +46,5 @@ export const profileNavItems = [
 ]
 
 export const noHeaderFooterUrls = ['/create-account', '/login', '/recover-password']
+
+
