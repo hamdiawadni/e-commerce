@@ -519,8 +519,15 @@ export interface Footer {
   createdAt?: string;
 }
 
+<<<<<<< HEAD
 /*
 declare module 'payload' {
   export interface GeneratedTypes extends Config {}
 }
   */
+=======
+
+declare module 'payload' {
+  export interface GeneratedTypes extends Config {}
+}
+>>>>>>> 6c57724ef46a08baa76d57e36fae37b968ccec18
