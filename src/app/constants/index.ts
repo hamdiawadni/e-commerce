@@ -1,24 +1,23 @@
 export const inclusions = [
-
   {
-    title: 'Free Shipping',
-    description: 'Free shipping for order above $150',
-    icon: '/assets/icons/shipping.svg',
+    title: 'Certified Courses',
+    description: 'IFBB Official & Certified Courses',
+    icon: '/assets/icons/shipping.png',
   },
   {
-    title: 'Money Guarantee',
-    description: 'Within 30 days for an exchange',
-    icon: '/assets/icons/dollar.svg',
+    title: 'Expert Trainers',
+    description: 'Delivered by certified and experienced professionals.',
+    icon: '/assets/icons/dollar.png',
   },
   {
     title: 'Online Support',
     description: '24 hours a day, 7 days a week',
-    icon: '/assets/icons/support.svg',
+    icon: '/assets/icons/support.png',
   },
   {
     title: 'Flexible Payment',
     description: 'Pay with multiple credit cards',
-    icon: '/assets/icons/payment.svg',
+    icon: '/assets/icons/payment.png',
   },
 ]
 
