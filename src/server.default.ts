@@ -29,6 +29,7 @@ const start = async (): Promise<void> => {
     onInit: () => {
       payload.logger.info(`Payload Admin URL: ${payload.getAdminURL()}`)
     },
+    mongoURL: '',
   })
 
   if (process.env.PAYLOAD_SEED === 'true') {
