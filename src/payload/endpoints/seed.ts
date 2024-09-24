@@ -1,11 +1,10 @@
+/* eslint-disable @typescript-eslint/no-shadow */
+import payload from 'payload'
 import type { PayloadHandler } from 'payload/config'
 
+// eslint-disable-next-line import/namespace, @typescript-eslint/no-unused-vars
+import { Page, User } from '../payload-types'
 import { seed as seedScript } from '../seed'
-
-
-
-
-import payload from 'payload'
 
 export const seed: PayloadHandler = async (req, res): Promise<void> => {
   const { user, payload } = req
@@ -24,7 +23,6 @@ export const seed: PayloadHandler = async (req, res): Promise<void> => {
     res.json({ error: message })
   }
 }
-
 async function createAdminUser() {
   try {
     const newUser = await payload.create({
@@ -43,3 +41,4 @@ async function createAdminUser() {
 }
 
 createAdminUser();
+
