@@ -30,29 +30,24 @@ export interface Config {
     footer: Footer;
   };
 }
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "pages".
- */
 export interface Page {
   id: string;
   title: string;
-  publishedOn?: string ;
+  publishedOn?: string;
   hero: {
-    type: 'none' | 'highImpact' | 'mediumImpact' | 'lowImpact';
+    type: 'none' | 'highImpact' | 'mediumImpact' | 'lowImpact' | 'customHero';
     richText: {
       [k: string]: unknown;
     }[];
-    links?:
-      | {
+    links?: {
       link: {
-            type?: ('reference' | 'custom') | null;
-            newTab?: boolean | null;
-            reference?: {
+        type?: 'reference' | 'custom';
+        newTab?: boolean;
+        reference: {
           relationTo: 'pages';
           value: string | Page;
-            } | null;
-            url?: string | null;
+        };
+        url: string;
         label: string;
         icon?: string | Media;
         appearance?: 'default' | 'primary' | 'secondary';
@@ -170,7 +165,7 @@ export interface Media {
   }[];
   updatedAt: string;
   createdAt: string;
-  url?: string;
+  url?: string | null ;
   filename?: string;
   mimeType?: string;
   filesize?: number;
@@ -180,7 +175,7 @@ export interface Media {
 export interface Category {
   id: string;
   title: string;
-  media?: string | Media;
+  media?: string | Media | null ;
   parent?: string | Category;
   breadcrumbs?: {
     doc?: string | Category;
@@ -520,9 +515,6 @@ export interface Footer {
 }
 
 
-
-
 declare module 'payload' {
   export interface GeneratedTypes extends Config {}
 }
-

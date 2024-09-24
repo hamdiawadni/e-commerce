@@ -3,8 +3,10 @@
 import React, { createContext, useCallback, useContext, useEffect, useState } from 'react'
 
 import { User } from '../../../payload/payload-types'
+import resetPassword from 'payload/dist/auth/operations/resetPassword'
+import ResetPassword from '../../(pages)/reset-password/page'
 
-// eslint-disable-next-line no-unused-vars
+
 type ResetPassword = (args: {
   password: string
   passwordConfirm: string
