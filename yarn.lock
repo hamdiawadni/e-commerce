@@ -1427,7 +1427,7 @@
     webpack-dev-middleware "6.1.2"
     webpack-hot-middleware "^2.25.3"
 
-"@payloadcms/db-mongodb@^1.0.3":
+"@payloadcms/db-mongodb@^1.7.2":
   version "1.7.2"
   resolved "https://registry.npmjs.org/@payloadcms/db-mongodb/-/db-mongodb-1.7.2.tgz"
   integrity sha512-C2qlhDE7EBgr+2dZvjj6aqdIBWDWdKb508O7+RQEXijNHYSUxC3VXxI21WBhRcFehBXU5WpYrFBxtU3CPJEmAw==

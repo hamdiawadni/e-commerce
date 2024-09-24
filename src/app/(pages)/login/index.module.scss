@@ -1,6 +1,7 @@
 @import '../../_css/common';
 
-.Login {
+
+.login {
   display: grid;
   grid-template-columns: 1fr 45%;
   height: 100vh;
@@ -11,7 +12,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url('/assets/images/image-1.svg');
+    background-image: url('/assets/images/image-1.png');
   }
 
   p {
@@ -40,12 +41,12 @@
 }
 
 .heroImg {
-  width: 845px;
-  height: 1024px; 
+  height: 100%;
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url('/assets/images/image-1.svg');
+  background-image: url('/assets/images/image-1.png');
 
   @include mid-break {
     background: none;
@@ -55,7 +56,7 @@
 }
 
 .logo {
-  margin: 60px;
+  margin: 50px;
   width: 30%;
   min-width: 150px;
   z-index: 10;
