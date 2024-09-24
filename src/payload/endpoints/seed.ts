@@ -31,7 +31,7 @@ async function createAdminUser() {
         email: 'sarra.mejdi@insat.ucar.tn',  // Replace with a valid email
         password: 'azerty',  // Replace with a strong password
         roles: ['admin'],  // Setting the user as an admin
-        name: 'Sarrar',
+        name: 'Sarra',
       },
     });
     console.log('Admin user created:', newUser);
