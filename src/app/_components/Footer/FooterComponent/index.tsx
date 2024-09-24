@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
+// eslint-disable-next-line import/namespace
 import { Footer, Media} from '../../../../payload/payload-types'
 import { inclusions, noHeaderFooterUrls, profileNavItems } from '../../../constants'
 import { Button } from '../../Button'
@@ -25,8 +26,8 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
               <Image
                 src={inclusion.icon}
                 alt={inclusion.title}
-                width={36}
-                height={36}
+                width={50}
+                height={50}
                 className={classes.icon}
               />
 
@@ -41,7 +42,7 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
         <Gutter>
           <div className={classes.wrap}>
             <Link href="/">
-              <Image src="/logo-white.png" alt="logo" width={350} height={150} />
+              <Image src="/logo-white.png" alt="logo" width={400} height={200} />
             </Link>
 
             <p>{footer?.copyright}</p>
@@ -58,7 +59,6 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
                     newTab={true}
                     className={classes.socialLinkItem}
                   >
-                    
                     <Image
                       src={icon?.url}
                       alt={item.link.label}

@@ -1,8 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
 
+// eslint-disable-next-line import/namespace
 import { Page } from '../../../payload/payload-types'
 import { Button, Props as ButtonProps } from '../Button'
+
+import classes from './index.module.scss'
 
 type CMSLinkType = {
   type?: 'custom' | 'reference'
@@ -44,7 +47,7 @@ export const CMSLink: React.FC<CMSLinkType> = ({
 
     if (href || url) {
       return (
-        <Link {...newTabProps} href={href || url} className={className}>
+        <Link {...newTabProps} href={href || url} className={classes.customLink}>
           {label && label}
           {children && children}
         </Link>
