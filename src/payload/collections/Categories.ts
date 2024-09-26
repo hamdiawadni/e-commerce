@@ -1,7 +1,7 @@
 import type { CollectionConfig } from 'payload/types'
 
-const Categories: CollectionConfig = {
-  slug: 'categories',
+const Categorie: CollectionConfig = {
+  slug: 'categorie',
   admin: {
     useAsTitle: 'title',
   },
@@ -24,4 +24,4 @@ const Categories: CollectionConfig = {
   ],
 }
 
-export default Categories
+export default Categorie
