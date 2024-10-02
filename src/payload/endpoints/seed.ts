@@ -23,18 +23,22 @@ export const seed: PayloadHandler = async (req, res): Promise<void> => {
     res.json({ error: message })
   }
 }
-
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-const createUser = async () => {
-  await payload.create({
-    collection: 'users',
-    data: {
-      email: 'sarra.mejdi@insat.ucar.tn',
-      password: 'azerty',
-      firstName: 'Sarra',
-      roles: ['admin'],
-    },
-  })
+async function createAdminUser() {
+  try {
+    const newUser = await payload.create({
+      collection: 'users',  // The slug of the Users collection
+      data: {
+        email: 'sarra.mejdi@insat.ucar.tn',  // Replace with a valid email
+        password: 'azerty',  // Replace with a strong password
+        roles: ['admin'],  // Setting the user as an admin
+        name: 'Sarra',
+      },
+    });
+    console.log('Admin user created:', newUser);
+  } catch (error) {
+    console.error('Error creating admin user:', error);
+  }
 }
 
-createUser().catch(console.error)
+createAdminUser();
+

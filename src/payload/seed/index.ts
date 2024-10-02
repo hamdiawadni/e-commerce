@@ -15,17 +15,10 @@ import { productsPage } from './products-page'
 const collections = ['categories', 'media', 'pages', 'products']
 const globals = ['header', 'settings', 'footer']
 
-// Next.js revalidation errors are normal when seeding the database without a server running
-// i.e. running `yarn seed` locally instead of using the admin UI within an active app
-// The app is not running to revalidate the pages and so the API routes are not available
-// These error messages can be ignored: `Error hitting revalidate route for...`
+
 export const seed = async (payload: Payload): Promise<void> => {
   payload.logger.info('Seeding database...')
 
-  // we need to clear the media directory before seeding
-  // as well as the collections and globals
-  // this is because while `yarn seed` drops the database
-  // the custom `/api/seed` endpoint does not
 
   payload.logger.info(`— Clearing media...`)
 
@@ -107,8 +100,7 @@ export const seed = async (payload: Payload): Promise<void> => {
 
   payload.logger.info(`— Seeding products...`)
 
-  // Do not create product with `Promise.all` because we want the products to be created in order
-  // This way we can sort them by `createdAt` or `publishedOn` and they will be in the expected order
+  
   const product1Doc = await payload.create({
     collection: 'products',
     data: JSON.parse(

@@ -28,7 +28,32 @@ const Users: CollectionConfig = {
     beforeChange: [createStripeCustomer],
     afterChange: [loginAfterCreate],
   },
-  auth: true,
+  auth:  {
+    forgotPassword: {
+      generateEmailHTML: ({ req, token, user }) => {
+        const resetPasswordURL = `https://yourfrontend.com/reset-password?token=${token}`;
+        return `
+          <!doctype html>
+          <html>
+            <body>
+              <h1>Password Reset Request</h1>
+              <p>Hello!</p>
+              <p>Click below to reset your password:</p>
+              <p>
+                <a href="${resetPasswordURL}">Reset Password</a>
+              </p>
+            </body>
+          </html>
+        `;
+      },
+      generateEmailSubject: ({ req, user }) => {
+        return `Password Reset Request for ${user.email}`;
+      },
+    },
+  },
+
+
+
   endpoints: [
     {
       path: '/:teamID/customer',
