@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-// eslint-disable-next-line import/namespace
+// eslint-disable-next-line import/namespace, prettier/prettier
 import { Footer, Media} from '../../../../payload/payload-types'
 import { inclusions, noHeaderFooterUrls, profileNavItems } from '../../../constants'
 import { Button } from '../../Button'
@@ -42,10 +42,10 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
         <Gutter>
           <div className={classes.wrap}>
             <Link href="/">
-              <Image src="/logo-white.png" alt="logo" width={400} height={200} />
+              <Image src="/logo-white.png" alt="logo" width={300} height={100} />
             </Link>
 
-            <p>{footer?.copyright}</p>
+            <p className="pi">{footer.copyright}</p>
 
             <div className={classes.socialLinks}>
               {navItems.map(item => {
