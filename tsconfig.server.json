@@ -5,6 +5,16 @@
     "outDir": "dist",
     "noEmit": false,
     "jsx": "react",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "sourceMap": true,
+    "target": "ES5", 
+
+  },
+  "ts-node": {
+    "transpileOnly": true,
+    "compiler": "typescript",
   },
   "include": [
     "src/server.ts",

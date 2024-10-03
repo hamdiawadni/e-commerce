@@ -12,7 +12,7 @@ const Promotion = () => {
   })
 
   const targetDate = new Date()
-  targetDate.setDate(targetDate.getDate() + 3)
+  targetDate.setDate(targetDate.getDate() + 3) //three houwa kadech thblou wakt
 
   useEffect(() => {
     const timerInterval = setInterval(() => {
@@ -42,9 +42,7 @@ const Promotion = () => {
       <div className={classes.textBox}>
         <h3 className={classes.title}>Deals of the Month</h3>
         <p>
-          Get ready for a shopping experience like never before with our Deals of the Month! Every
-          purchase comes with exclusive perks and offers, making this month a celebration of savvy
-          choices and amazing deals. Don't miss out! 🎁🛒
+          Put whatever you want Hamdi change me in scr/app/_components/promotion/index.tsx Thank you 🎁🛒
         </p>
 
         <ul className={classes.stats}>
